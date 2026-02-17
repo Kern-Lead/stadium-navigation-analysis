@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Gap Analysis - Stadium Navigation Analysis</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Stadium Navigation Analysis</a>
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Navigation items will be populated by JavaScript -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb-path">
+                <a href="index.html">Home</a> &gt; <span>Content Gap Analysis</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">What Changed Between Versions</h1>
+            <p class="page-subtitle">
+                A detailed analysis of content and functionality changes across Stadium's navigation evolution, highlighting both gains and areas where content was streamlined.
+            </p>
+        </div>
+
+        <!-- Overview -->        
+        <section class="content-section">
+            <h2 class="section-title">Analysis Overview</h2>
+            <div class="section-content">
+                <p>This analysis examines the content and structural changes across Stadium's four navigation versions. The focus is on understanding what was gained, streamlined, or reorganized—particularly in the significant V2→V3 transition—to inform future navigation decisions.</p>
+                
+                <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px; margin: 24px 0;">
+                    <h4 style="margin-bottom: 12px; color: #1e40af;">Key Finding</h4>
+                    <p style="margin: 0; color: #1e3a8a;">The V2→V3 transition successfully reduced complexity but may have streamlined away some content that enterprise users rely on for navigation and discovery. Understanding these changes helps identify opportunities for strategic restoration.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Major Changes Analysis -->
+        <section class="content-section">
+            <h2 class="section-title">Major Content Changes: V2 → V3</h2>
+            <div class="section-content">
+                <h3 style="color: #dc2626; margin-bottom: 16px;">🔄 Complete Solutions Dropdown Removal</h3>
+                <p>The most significant change was the complete removal of the Solutions dropdown, which contained structured pathways for different user types and business scenarios.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+                    <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border: 1px solid #fecaca;">
+                        <h4 style="color: #dc2626; margin-bottom: 12px;">V2 Solutions Content (Removed)</h4>
+                        <ul style="color: #991b1b; font-size: 14px; margin: 0;">
+                            <li>By Team: HR, Team Leaders, Sales & Marketing, Operations</li>
+                            <li>By Scenario: 7 specific use cases</li>
+                            <li>By Vertical: Shops, Swag, Snacks</li>
+                            <li>Campaign promotion section</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                        <h4 style="color: #16a34a; margin-bottom: 12px;">V3 Replacement: Resources</h4>
+                        <ul style="color: #15803d; font-size: 14px; margin: 0;">
+                            <li>Case Studies</li>
+                            <li>Templates</li>
+                            <li>By Team (educational context)</li>
+                            <li>Much more focused scope</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3 style="color: #d97706; margin-bottom: 16px;">📦 Platform Dropdown Simplification</h3>
+                <p>The Platform dropdown was significantly streamlined, moving from detailed feature explanations to high-level categories.</p>
+                
+                <div style="margin: 20px 0; overflow-x: auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">V2 Platform Content</th>
+                                <th style="width: 50%;">V3 Platform Content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <strong>Overview Section:</strong><br>
+                                    • Recipient's Choice (with explanation)<br>
+                                    • Sender's Choice (with explanation)<br>
+                                    • Peer-to-Peer (NEW badge)<br><br>
+                                    <strong>Features Section:</strong><br>
+                                    • 12 specific features listed<br>
+                                    • Shop Templates, Global by Default<br>
+                                    • Branded Swag, Teams, Swag Locker<br>
+                                    • Stadium Wallet, Customizations<br>
+                                    • Stadium Rewards, Integrations<br>
+                                    • Dashboard, Campaigns<br>
+                                    • "View All Features" link
+                                </td>
+                                <td style="vertical-align: top;">
+                                    <strong>Simplified Categories:</strong><br>
+                                    • Recognition (2 items)<br>
+                                    • Swag (3 items)<br>
+                                    • Gifting (2 items)<br><br>
+                                    <strong>No Features Section</strong><br>
+                                    • Feature details not visible in navigation<br>
+                                    • No explanatory content<br>
+                                    • Clean, minimal presentation
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 style="color: #059669; margin-bottom: 16px;">🛍️ Catalog Navigation Transformation</h3>
+                <p>Perhaps the most dramatic simplification occurred in the Catalog dropdown.</p>
+                
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin: 24px 0;">
+                    <div style="background: #fffbeb; padding: 20px; border-radius: 8px; border: 1px solid #fed7aa;">
+                        <h4 style="color: #d97706; margin-bottom: 12px;">V2 Comprehensive Catalog</h4>
+                        <div style="columns: 2; column-gap: 16px; font-size: 14px; color: #92400e;">
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>🍕 Food & Beverages</strong><br>
+                                • Snacks, Munchies<br>
+                                • Sweets & Desserts, Sippables
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>📦 Merch</strong><br>
+                                • Apparel, Drinkware<br>
+                                • Office, Bags
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>🏠 Life & Hobbies</strong><br>
+                                • Home Kits, Cooking & Kitchen<br>
+                                • Games, Toys & Books, Travel
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>💼 Work From Anywhere</strong><br>
+                                • Desk Accessories<br>
+                                • Electronics & Tools
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>🌟 Wellness</strong><br>
+                                • Self-Care & Beauty<br>
+                                • Fitness, Plants & Flowers
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>🎯 Experiences</strong><br>
+                                • Online, At Home<br>
+                                • In Person Experiences
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>🎁 Gift Cards</strong><br>
+                                • Food & Groceries<br>
+                                • Subscriptions & Services
+                            </div>
+                            <div style="break-inside: avoid; margin-bottom: 12px;">
+                                <strong>🎩 Luxury</strong><br>
+                                • Fashion & Fragrance<br>
+                                • Luxe Home, Delicacies
+                            </div>
+                        </div>
+                        <p style="margin-top: 16px; font-weight: 600; color: #92400e;">Total: 8 categories, 31+ subcategories</p>
+                    </div>
+                    
+                    <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                        <h4 style="color: #16a34a; margin-bottom: 12px;">V3 Streamlined Catalog</h4>
+                        <div style="font-size: 14px; color: #15803d;">
+                            <strong>Featured</strong><br>
+                            • Swag Catalog →<br>
+                            • Gift Catalog →
+                        </div>
+                        <p style="margin-top: 16px; font-weight: 600; color: #15803d;">Total: 2 featured links</p>
+                        
+                        <div style="margin-top: 20px; padding: 16px; background: #dcfce7; border-radius: 6px;">
+                            <p style="font-size: 13px; color: #16a34a; margin: 0;"><strong>Impact:</strong> 95% reduction in navigation complexity, but also 95% reduction in browsing capability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Impact Assessment -->
+        <section class="content-section">
+            <h2 class="section-title">Content Impact Assessment</h2>
+            <div class="section-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    <div class="card" style="border-left: 4px solid #dc2626;">
+                        <h3 class="card-title" style="color: #dc2626;">🔴 Critical Content Gaps</h3>
+                        <div class="card-description" style="color: #374151;">
+                            <strong>Must Address:</strong>
+                            <ul style="margin: 12px 0 0 20px; font-size: 14px;">
+                                <li>Solutions dropdown structure (B2B pattern)</li>
+                                <li>Team-based navigation paths</li>
+                                <li>Use case scenario discovery</li>
+                                <li>Platform feature visibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="border-left: 4px solid #d97706;">
+                        <h3 class="card-title" style="color: #d97706;">🟡 Moderate Content Gaps</h3>
+                        <div class="card-description" style="color: #374151;">
+                            <strong>Consider Restoring:</strong>
+                            <ul style="margin: 12px 0 0 20px; font-size: 14px;">
+                                <li>Platform overview explanations</li>
+                                <li>Category-based catalog browsing</li>
+                                <li>Feature details in navigation</li>
+                                <li>Industry-specific pathways</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="border-left: 4px solid #16a34a;">
+                        <h3 class="card-title" style="color: #16a34a;">🟢 Successful Simplifications</h3>
+                        <div class="card-description" style="color: #374151;">
+                            <strong>Maintain as Simplified:</strong>
+                            <ul style="margin: 12px 0 0 20px; font-size: 14px;">
+                                <li>Excessive catalog subcategories</li>
+                                <li>Promotional content in navigation</li>
+                                <li>Deep feature lists</li>
+                                <li>Redundant explanatory text</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Summary -->
+        <section class="content-section">
+            <h2 class="section-title">Strategic Restoration Opportunities</h2>
+            <div class="section-content">
+                <p>Based on this content analysis, there are clear opportunities to restore key elements that support enterprise navigation patterns while maintaining the simplicity gains achieved in V3.</p>
+                
+                <div style="margin: 24px 0;">
+                    <h4 style="color: #4f46e5; margin-bottom: 16px;">Recommended Restoration Priority:</h4>
+                    
+                    <div style="display: flex; align-items: flex-start; gap: 16px; padding: 16px; background: #fef2f2; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 16px;">
+                        <div style="background: #dc2626; color: white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">1</div>
+                        <div>
+                            <strong>Solutions Dropdown Structure:</strong> Restore the fundamental B2B navigation pattern with By Team, By Use Case, and By Industry organization. This addresses the most significant gap for enterprise users.
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; gap: 16px; padding: 16px; background: #fffbeb; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 16px;">
+                        <div style="background: #f59e0b; color: white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">2</div>
+                        <div>
+                            <strong>Platform Feature Discoverability:</strong> Add progressive disclosure of key features and capabilities to help technical evaluators and existing customers discover Stadium's full potential.
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; gap: 16px; padding: 16px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <div style="background: #3b82f6; color: white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">3</div>
+                        <div>
+                            <strong>Smart Catalog Browsing:</strong> Implement progressive disclosure for catalog categories—keep the clean "Featured" approach but add expandable category browsing for users who need it.
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-top: 24px;">
+                    <h4 style="color: #475569; margin-bottom: 12px;">Implementation Principle</h4>
+                    <p style="color: #64748b; margin: 0; font-style: italic;">"Restore function, maintain form" – Bring back essential navigation patterns and content while preserving the clean, uncluttered experience users now appreciate in V3.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Between Pages -->
+        <div class="page-navigation">
+            <a href="findings-summary.html" class="nav-button secondary">
+                ← Previous: Findings Summary
+            </a>
+            <a href="user-journey-impact.html" class="nav-button">
+                Next: User Journey Impact →
+            </a>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="assets/navigation.js"></script>
+    <script>
+        // Set page-specific navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.NavigationUtils) {
+                window.NavigationUtils.generatePageNavigation('content');
+            }
+        });
+    </script>
+</body>
+</html>

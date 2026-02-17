@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Evolution Overview - Stadium</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .version-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e5e7eb;
+            scroll-margin-top: 80px;
+        }
+        
+        .version-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .version-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .version-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .version-subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        .top-nav-display {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 32px;
+            font-family: monospace;
+        }
+        
+        .version-1 { color: #3b82f6; }
+        .version-2 { color: #f59e0b; }
+        .version-3 { color: #10b981; }
+        .version-4 { color: #8b5cf6; }
+        .version-5 { color: #16a34a; background: #f0fdf4; border-color: #bbf7d0; }
+        
+        .dropdown-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            font-size: 14px;
+            height: fit-content;
+        }
+        
+        .dropdown-title {
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .dropdown-content {
+            font-family: monospace;
+            line-height: 1.6;
+        }
+        
+        .empty-dropdown {
+            background: #f9fafb;
+            color: #9ca3af;
+            font-style: italic;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .proposed-highlight {
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2);
+            border: 2px solid #16a34a;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Stadium Top Nav</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#version-1">Version 1</a></li>
+                    <li><a href="#version-2">Version 2</a></li>
+                    <li><a href="#version-3">Version 3</a></li>
+                    <li><a href="#version-4">Version 4</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb-path">
+                <a href="index.html">Home</a> &gt; <span>Navigation Evolution Overview</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <div class="page-header">
+            <h1 class="page-title">Stadium Navigation Evolution</h1>
+
+        </div>
+
+        <!-- Version 1 -->
+        <section id="version-1" class="version-section">
+            <div class="version-header">
+                <h2 class="version-title version-1">Version 1 - Previously Live</h2>
+                <p class="version-subtitle">Evolution from single Platform dropdown to three comprehensive dropdowns</p>
+                <div class="top-nav-display version-1">
+                    Platform | Solutions | Catalog | Pricing
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr auto 1fr 1fr 1fr; gap: 20px; align-items: start;">
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #3b82f6;">🔧 Platform</div>
+                    <div class="dropdown-content" style="color: #1e40af;">
+                        <strong>WAYS TO ENGAGE</strong><br>
+                        ├── Recognition Programs<br>
+                        ├── Send Items<br>
+                        ├── Company Shops<br>
+                        ├── Snack Boxes<br>
+                        ├── On-Demand Swag<br>
+                        ├── Bulk Swag<br>
+                        ├── Swag Storage<br>
+                        └── Swag Kits<br>
+                        <br>
+                        <strong>FEATURES</strong><br>
+                        ├── Global by Default<br>
+                        ├── Stadium Wallet<br>
+                        ├── Integrations<br>
+                        ├── Customizations<br>
+                        ├── Teams<br>
+                        ├── Dashboard<br>
+                        ├── Swag Locker<br>
+                        ├── Stadium Rewards<br>
+                        ├── Enterprise<br>
+                        ├── Branded Swag<br>
+                        ├── Campaigns<br>
+                        └── View All Features
+                    </div>
+                </div>
+                
+                <!-- ASCII Arrow -->
+                <div style="display: flex; align-items: center; justify-content: center; font-size: 32px; color: #6b7280; font-family: monospace; padding: 0 10px;">
+                    →
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #3b82f6;">🔧 Platform</div>
+                    <div class="dropdown-content" style="color: #1e40af;">
+                        <strong>OVERVIEW</strong><br>
+                        ├── Recipient's Choice<br>
+                        ├── Sender's Choice<br>
+                        └── Peer-to-Peer<br>
+                        <br>
+                        <strong>FEATURES</strong><br>
+                        ├── Shop Templates<br>
+                        ├── Global by Default<br>
+                        ├── Branded Swag<br>
+                        ├── Teams<br>
+                        ├── Swag Locker<br>
+                        ├── Stadium Wallet<br>
+                        ├── Customizations<br>
+                        ├── Stadium Rewards<br>
+                        ├── Integrations<br>
+                        ├── Dashboard<br>
+                        ├── Campaigns<br>
+                        └── View All Features
+                    </div>
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #f59e0b;">🎯 Solutions</div>
+                    <div class="dropdown-content" style="color: #92400e;">
+                        <strong>VERTICALS</strong><br>
+                        ├── Shops<br>
+                        ├── Swag<br>
+                        └── Snacks<br>
+                        <br>
+                        <strong>SCENARIOS</strong><br>
+                        ├── Rewards & Recognition<br>
+                        ├── Event Engagement<br>
+                        ├── Employee Onboarding<br>
+                        ├── Client Gifting<br>
+                        ├── Swag Creation/Distribution<br>
+                        ├── Employee Engagement<br>
+                        └── Prospect Gifting<br>
+                        <br>
+                        <strong>TEAMS</strong><br>
+                        ├── Human Resources<br>
+                        ├── Team Leaders<br>
+                        ├── Sales & Marketing<br>
+                        └── Operations
+                    </div>
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #d97706;">🛍️ Catalog</div>
+                    <div class="dropdown-content" style="color: #92400e;">
+                        🍕 <strong>Food & Beverages</strong><br>
+                        🎁 <strong>Merch</strong><br>
+                        🏠 <strong>Life & Hobbies</strong><br>
+                        💼 <strong>Work From Anywhere</strong><br>
+                        🌟 <strong>Wellness</strong><br>
+                        🎯 <strong>Experiences</strong><br>
+                        🎁 <strong>Gift Cards</strong><br>
+                        🎩 <strong>Luxury</strong><br>
+                        <br>
+                        <em>8 main categories</em><br>
+                        <em>31+ subcategories total</em>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 2 (was V3) -->
+        <section id="version-2" class="version-section">
+            <div class="version-header">
+                <h2 class="version-title version-3">Version 2 - Currently Live</h2>
+                <p class="version-subtitle">Streamlined approach with Solutions replaced by Resources</p>
+                <div class="top-nav-display version-3">
+                    Platform | Catalog | Resources | Pricing
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #3b82f6;">🔧 Platform</div>
+                    <div class="dropdown-content" style="color: #1e40af;">
+                        <strong>RECOGNITION</strong><br>
+                        ├── Kudos Programs<br>
+                        └── Milestone Programs<br>
+                        <br>
+                        <strong>SWAG</strong><br>
+                        ├── Bulk Swag<br>
+                        ├── On-Demand Swag<br>
+                        └── Shops<br>
+                        <br>
+                        <strong>GIFTING</strong><br>
+                        ├── Snack Boxes<br>
+                        └── Prospect & Client Gifting
+                    </div>
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #d97706;">🛍️ Catalog</div>
+                    <div class="dropdown-content" style="color: #92400e;">
+                        <strong>Featured</strong><br>
+                        ├── Swag Catalog →<br>
+                        └── Gift Catalog →
+                    </div>
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #8b5cf6;">📚 Resources</div>
+                    <div class="dropdown-content" style="color: #7c3aed;">
+                        <strong>RESOURCES</strong><br>
+                        ├── Case Studies<br>
+                        └── Templates →<br>
+                        <br>
+                        <strong>BY TEAM</strong><br>
+                        ├── HR<br>
+                        ├── Sales & Marketing<br>
+                        ├── Operations<br>
+                        └── Events
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 3 -->
+        <section id="version-3" class="version-section">
+            <div class="version-header">
+                <h2 class="version-title version-4">Version 3 - Mural.co </h2>
+                <p class="version-subtitle">Future vision with industry focus and expanded team organization</p>
+                <div class="top-nav-display version-4">
+                    Platform | Catalog | Resources | Pricing
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #3b82f6;">🔧 Platform</div>
+                    <div class="dropdown-content" style="color: #1e40af;">
+                        <strong>Platform Overview </strong><br>
+                        <br>
+                        <strong>Recognition</strong><br>
+                        ├── Employee Kudos Programs<br>
+                        ├── Milestone Gifting<br>
+                        └── Incentive Programs <br>
+                        <br>
+                        <strong>Swag</strong><br>
+                        ├── In-Person Swag<br>
+                        ├── Distributed Swag<br>
+                        └── Company Shops<br>
+                        <br>
+                        <strong>Gifting </strong><br>
+                        ├── Employee Gifting <br>
+                        └── Prospect/Client Gifting<br>
+                        <br>
+                        <strong>External (Vendor/Agency) </strong>
+                    </div>
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #d97706;">🛍️ Catalog</div>
+                    <div class="dropdown-content" style="color: #92400e;">
+                        <strong>Catalog</strong><br>
+                        ├── Featured<br>
+                        └── Swag Catalog<br>
+                        └── Gift Catalog
+                    </div>
+                </div>
+                
+                <div class="dropdown-card">
+                    <div class="dropdown-title" style="color: #8b5cf6;">📚 Resources</div>
+                    <div class="dropdown-content" style="color: #7c3aed;">
+                        <strong>Why Stadium</strong><br>
+                        └── Case Studies<br>
+                        <br>
+                        <strong>By Team [Drop Down]</strong><br>
+                        ├── HR<br>
+                        ├── Marketing <br>
+                        ├── Sales<br>
+                        ├── Events<br>
+                        └── Operations<br>
+                        <br>
+                        <strong>By Industry [Drop Down]</strong><br>
+                        ├── Technology <br>
+                        ├── Finance <br>
+                        └── Healthcare <br>
+                        <br>
+                        <strong>Blog </strong><br>
+                        <strong>Reports</strong><br>
+                        <strong>Vendors</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 4 - Proposed -->
+        <section id="version-4" class="version-section">
+            <div class="version-header">
+                <h2 class="version-title version-5">Version 4 - K+L Proposed Direction</h2>
+                <p class="version-subtitle">Balanced approach restoring B2B patterns while maintaining simplicity</p>
+                <div class="top-nav-display version-5">
+                    Platform | Solutions | Catalog | Resources | Company | Pricing
+                </div>
+                
+                <!-- Clear Separation of Concerns -->
+                <div style="margin: 32px 0;">
+                    <h3 style="color: #4f46e5; margin-bottom: 24px; text-align: center; font-size: 24px;">Clear Separation of Concerns</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 20px;">
+                        <div style="background: #fff; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <h4 style="color: #3b82f6; margin-bottom: 8px; font-size: 18px;">Platform</h4>
+                            <div style="color: #1e40af; font-weight: 600; margin-bottom: 4px;">What we build</div>
+                            <p style="font-size: 14px; margin: 0; color: #374151;">Products, features, and capabilities</p>
+                        </div>
+                        
+                        <div style="background: #fff; border-left: 4px solid #16a34a; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <h4 style="color: #16a34a; margin-bottom: 8px; font-size: 18px;">Solutions</h4>
+                            <div style="color: #15803d; font-weight: 600; margin-bottom: 4px;">How we help</div>
+                            <p style="font-size: 14px; margin: 0; color: #374151;">Audiences, use cases, and industries</p>
+                        </div>
+                        
+                        <div style="background: #fff; border-left: 4px solid #d97706; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <h4 style="color: #d97706; margin-bottom: 8px; font-size: 18px;">Catalog</h4>
+                            <div style="color: #92400e; font-weight: 600; margin-bottom: 4px;">What you can get</div>
+                            <p style="font-size: 14px; margin: 0; color: #374151;">Products and browsing</p>
+                        </div>
+                        
+                        <div style="background: #fff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <h4 style="color: #8b5cf6; margin-bottom: 8px; font-size: 18px;">Resources</h4>
+                            <div style="color: #7c3aed; font-weight: 600; margin-bottom: 4px;">How to succeed</div>
+                            <p style="font-size: 14px; margin: 0; color: #374151;">Education and support</p>
+                        </div>
+                        
+                        <div style="background: #fff; border-left: 4px solid #dc2626; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <h4 style="color: #dc2626; margin-bottom: 8px; font-size: 18px;">Company</h4>
+                            <div style="color: #991b1b; font-weight: 600; margin-bottom: 4px;">Who we are</div>
+                            <p style="font-size: 14px; margin: 0; color: #374151;">About us and partnerships</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 16px;">
+                <div class="dropdown-card proposed-highlight">
+                    <div class="dropdown-title" style="color: #3b82f6;">🔧 Platform</div>
+                    <div class="dropdown-content" style="color: #1e40af;">
+                        <strong>Platform Overview</strong><br>
+                        ├── How Stadium Works<br>
+                        └── Key Features Overview<br>
+                        <br>
+                        <strong>RECOGNITION</strong><br>
+                        ├── Kudos Programs<br>
+                        ├── Milestone Programs<br>
+                        └── Incentive Programs<br>
+                        <br>
+                        <strong>SWAG</strong><br>
+                        ├── Bulk Swag<br>
+                        ├── On-Demand Swag<br>
+                        ├── Company Shops<br>
+                        └── Swag Storage<br>
+                        <br>
+                        <strong>GIFTING</strong><br>
+                        ├── Snack Boxes<br>
+                        ├── Employee Gifting<br>
+                        └── Client Gifting<br>
+                        <br>
+                        <strong>Enterprise Features</strong><br>
+                        ├── Global by Default<br>
+                        ├── Stadium Wallet<br>
+                        ├── Advanced Integrations<br>
+                        └── View All Features →
+                    </div>
+                </div>
+                
+                <div class="dropdown-card proposed-highlight">
+                    <div class="dropdown-title" style="color: #16a34a;">🎯 Solutions</div>
+                    <div class="dropdown-content" style="color: #15803d;">
+                        <strong>BY TEAM</strong><br>
+                        ├── 👥 Human Resources<br>
+                        ├── 💼 Sales & Marketing<br>
+                        ├── ⚙️ Operations<br>
+                        └── 🎪 Events & Hospitality<br>
+                        <br>
+                        <strong>BY USE CASE</strong><br>
+                        ├── Employee Engagement<br>
+                        ├── Client Retention<br>
+                        ├── Event Experiences<br>
+                        ├── Sales Enablement<br>
+                        ├── Recognition Programs<br>
+                        └── Corporate Gifting<br>
+                        <br>
+                        <strong>BY INDUSTRY</strong><br>
+                        ├── 💻 Technology<br>
+                        ├── 🏥 Healthcare<br>
+                        ├── 🏦 Financial Services<br>
+                        ├── 🏭 Manufacturing<br>
+                        └── View All Industries →<br>
+                        <br>
+                        <strong>ENTERPRISE SOLUTIONS</strong><br>
+                        ├── Custom Programs<br>
+                        ├── Global Deployment<br>
+                        ├── Advanced Analytics<br>
+                        └── Dedicated Support
+                    </div>
+                </div>
+                
+                <div class="dropdown-card proposed-highlight">
+                    <div class="dropdown-title" style="color: #d97706;">🛍️ Catalog</div>
+                    <div class="dropdown-content" style="color: #92400e;">
+                        <strong>Collections</strong><br>
+                        ├── Featured →<br>
+                        ├── Swag Catalog →<br>
+                        └── Gift Catalog →<br>
+                        <br>
+                        <strong>BROWSE BY CATEGORY [Expandable]</strong><br>
+                        ├── 🍕 Food & Beverages<br>
+                        ├── 👕 Apparel & Accessories<br>
+                        ├── 💼 Office & Tech<br>
+                        ├── 🏠 Home & Lifestyle<br>
+                        ├── 🌟 Wellness & Fitness<br>
+                        ├── 🎯 Experiences<br>
+                        ├── 🎁 Gift Cards<br>
+                        └── View All Categories →<br>
+                        <br>
+                        <strong>SHOP BY PRICE</strong><br>
+                        ├── Under $25<br>
+                        ├── $25 - $50<br>
+                        ├── $50 - $100<br>
+                        └── Premium ($100+)<br>
+                        <br>
+                        <strong>Custom Branding</strong><br>
+                        ├── Logo Services<br>
+                        ├── Design Support<br>
+                        └── Brand Guidelines
+                    </div>
+                </div>
+                
+                <div class="dropdown-card proposed-highlight">
+                    <div class="dropdown-title" style="color: #8b5cf6;">📚 Resources</div>
+                    <div class="dropdown-content" style="color: #7c3aed;">
+                        <strong>LEARN</strong><br>
+                        ├── Case Studies<br>
+                        ├── Templates →<br>
+                        ├── Best Practices<br>
+                        └── ROI Calculator<br>
+                        <br>
+                        <strong>BY TEAM (Educational)</strong><br>
+                        ├── HR Resources<br>
+                        ├── Sales Resources<br>
+                        ├── Operations Resources<br>
+                        └── Events Resources<br>
+                        <br>
+                        <strong>INDUSTRY INSIGHTS</strong><br>
+                        ├── Technology Trends<br>
+                        ├── Healthcare Compliance<br>
+                        ├── Financial Services<br>
+                        └── Manufacturing<br>
+                        <br>
+                        <strong>SUPPORT</strong><br>
+                        ├── Help Center<br>
+                        ├── API Documentation<br>
+                        ├── Integration Guides<br>
+                        └── Contact Support
+                    </div>
+                </div>
+                
+                <div class="dropdown-card proposed-highlight">
+                    <div class="dropdown-title" style="color: #dc2626;">🏢 Company</div>
+                    <div class="dropdown-content" style="color: #991b1b;">
+                        <strong>ABOUT</strong><br>
+                        ├── About Stadium<br>
+                        ├── Our Story<br>
+                        ├── Leadership Team<br>
+                        └── Careers<br>
+                        <br>
+                        <strong>PARTNERSHIPS</strong><br>
+                        ├── Partner Program<br>
+                        ├── Become a Partner<br>
+                        └── Partner Directory<br>
+                        <br>
+                        <strong>NEWS & MEDIA</strong><br>
+                        ├── Press Releases<br>
+                        ├── Media Kit<br>
+                        └── Contact Press
+                    </div>
+                </div>
+            </div>
+            
+
+        </section>
+
+</div>
+        </div>
+    </main>
+
+    <script>
+        // Custom navigation for evolution page - don't load the automatic navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Keep the custom version-based navigation that's already in the HTML
+            // Don't override with the standard navigation menu
+        });
+    </script>
+</body>
+</html>

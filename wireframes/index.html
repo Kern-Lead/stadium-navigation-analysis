@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Wireframes - Stadium Navigation Analysis</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .wireframe-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            min-width: 400px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 50;
+            font-size: 14px;
+        }
+        
+        .wireframe-dropdown.active {
+            display: block;
+        }
+        
+        .dropdown-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        .dropdown-section {
+            margin-bottom: 20px;
+        }
+        
+        .dropdown-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .dropdown-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #e5e7eb;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .dropdown-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .dropdown-items li {
+            padding: 4px 0;
+        }
+        
+        .dropdown-items a {
+            color: #6b7280;
+            text-decoration: none;
+            display: block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-items a:hover {
+            color: #4f46e5;
+            background-color: #f8fafc;
+        }
+        
+        .demo-buttons {
+            margin: 20px 0;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .demo-button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+        
+        .demo-button:hover {
+            background: #3730a3;
+        }
+        
+        .demo-button.secondary {
+            background: #6b7280;
+        }
+        
+        .demo-button.secondary:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Stadium Navigation Analysis</a>
+            <nav><ul class="nav-menu"></ul></nav>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumb-container">
+            <div class="breadcrumb-path">
+                <a href="../index.html">Home</a> &gt; <span>Interactive Wireframes</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <div class="page-header">
+            <h1 class="page-title">Interactive Navigation Wireframes</h1>
+            <p class="page-subtitle">
+                Functional prototypes demonstrating current vs. proposed navigation structures
+            </p>
+        </div>
+
+        <!-- Demo Controls -->
+        <section class="content-section">
+            <h2 class="section-title">Guided Demos</h2>
+            <div class="section-content">
+                <p>Click the buttons below to see key user journeys in action:</p>
+                <div class="demo-buttons">
+                    <button class="demo-button" onclick="WireframeUtils.demoEnterpriseFlow()">
+                        🏢 Enterprise Buyer Flow
+                    </button>
+                    <button class="demo-button" onclick="WireframeUtils.demoHRFlow()">
+                        👩‍💼 HR Manager Journey
+                    </button>
+                    <button class="demo-button" onclick="WireframeUtils.demoPlatformFeatures()">
+                        🔧 Platform Features
+                    </button>
+                    <button class="demo-button secondary" onclick="location.reload()">
+                        🔄 Reset Demo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current V3 Navigation -->
+        <section class="content-section">
+            <h2 class="section-title">Current Navigation (V3)</h2>
+            <div class="section-content">
+                <p>This represents the current Stadium navigation structure:</p>
+                
+                <div class="wireframe-container">
+                    <div class="wireframe-nav">
+                        <div class="wireframe-logo">🏟️ Stadium</div>
+                        <div class="wireframe-menu">
+                            <button data-dropdown-wireframe="current-platform-dropdown">Platform</button>
+                            <button data-dropdown-wireframe="current-catalog-dropdown">Catalog</button>
+                            <button data-dropdown-wireframe="current-resources-dropdown">Resources</button>
+                            <button style="border: none; background: #1f2937; color: white;">Pricing</button>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                            <span style="font-size: 14px; color: #6b7280;">LOG IN / SIGN UP</span>
+                            <button style="background: #1f2937; color: white; border: none; padding: 8px 16px; border-radius: 6px;">BOOK A DEMO</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Platform Dropdown -->
+                    <div id="current-platform-dropdown" class="wireframe-dropdown">
+                        <div class="dropdown-columns">
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Recognition</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Kudos Programs</a></li>
+                                        <li><a href="#">Milestone Programs</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Swag</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Bulk Swag</a></li>
+                                        <li><a href="#">On-Demand Swag</a></li>
+                                        <li><a href="#">Shops</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Gifting</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Snack Boxes</a></li>
+                                        <li><a href="#">Prospect & Client Gifting</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Catalog Dropdown -->
+                    <div id="current-catalog-dropdown" class="wireframe-dropdown">
+                        <div class="dropdown-section">
+                            <div class="dropdown-title">Featured</div>
+                            <ul class="dropdown-items">
+                                <li><a href="#">Swag Catalog →</a></li>
+                                <li><a href="#">Gift Catalog →</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Resources Dropdown -->
+                    <div id="current-resources-dropdown" class="wireframe-dropdown">
+                        <div class="dropdown-columns">
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Resources</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Case Studies</a></li>
+                                        <li><a href="#">Templates →</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">By Team</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">HR</a></li>
+                                        <li><a href="#">Sales & Marketing</a></li>
+                                        <li><a href="#">Operations</a></li>
+                                        <li><a href="#">Events</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #fef2f2; border-left: 4px solid #dc2626; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                    <p style="margin: 0; color: #991b1b; font-size: 14px;"><strong>Issue:</strong> Teams are under Resources (educational context) rather than Solutions context. No clear enterprise buyer pathway.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposed Hybrid Navigation -->
+        <section class="content-section">
+            <h2 class="section-title">Proposed Hybrid Navigation</h2>
+            <div class="section-content">
+                <p>The proposed navigation restores Solutions dropdown while maintaining V3 simplicity:</p>
+                
+                <div class="wireframe-container">
+                    <div class="wireframe-nav">
+                        <div class="wireframe-logo">🏟️ Stadium</div>
+                        <div class="wireframe-menu">
+                            <button data-dropdown-wireframe="proposed-platform-dropdown">Platform</button>
+                            <button id="solutions-dropdown-button" data-dropdown-wireframe="proposed-solutions-dropdown" style="background: #f0fdf4; border-color: #16a34a; color: #16a34a; font-weight: 600;">Solutions</button>
+                            <button data-dropdown-wireframe="proposed-catalog-dropdown">Catalog</button>
+                            <button data-dropdown-wireframe="proposed-resources-dropdown">Resources</button>
+                            <button style="border: none; background: #1f2937; color: white;">Pricing</button>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                            <span style="font-size: 14px; color: #6b7280;">LOG IN / SIGN UP</span>
+                            <button style="background: #1f2937; color: white; border: none; padding: 8px 16px; border-radius: 6px;">BOOK A DEMO</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Proposed Platform Dropdown -->
+                    <div id="proposed-platform-dropdown" class="wireframe-dropdown">
+                        <div class="dropdown-columns">
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Platform Overview</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">How Stadium Works</a></li>
+                                        <li><a href="#">Key Features Overview</a></li>
+                                        <li><a href="#">Integration Capabilities</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Recognition</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Kudos Programs</a></li>
+                                        <li><a href="#">Milestone Programs</a></li>
+                                        <li><a href="#">Incentive Programs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Swag</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Bulk Swag</a></li>
+                                        <li><a href="#">On-Demand Swag</a></li>
+                                        <li><a href="#">Company Shops</a></li>
+                                        <li><a href="#">Swag Storage</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Gifting</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Snack Boxes</a></li>
+                                        <li><a href="#">Employee Gifting</a></li>
+                                        <li><a href="#">Client Gifting</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section" id="enterprise-features">
+                                    <div class="dropdown-title">Enterprise Features</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Global by Default</a></li>
+                                        <li><a href="#">Stadium Wallet</a></li>
+                                        <li><a href="#">Advanced Integrations</a></li>
+                                        <li><a href="#">View All Features →</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proposed Solutions Dropdown -->
+                    <div id="proposed-solutions-dropdown" class="wireframe-dropdown" style="min-width: 500px;">
+                        <div class="dropdown-columns">
+                            <div>
+                                <div class="dropdown-section" id="solutions-by-team">
+                                    <div class="dropdown-title">By Team</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#" id="hr-team-link" style="font-weight: 600;">👥 Human Resources</a></li>
+                                        <li><a href="#">💼 Sales & Marketing</a></li>
+                                        <li><a href="#">⚙️ Operations</a></li>
+                                        <li><a href="#">🎪 Events & Hospitality</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">By Use Case</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Employee Engagement</a></li>
+                                        <li><a href="#">Client Retention</a></li>
+                                        <li><a href="#">Event Experiences</a></li>
+                                        <li><a href="#">Sales Enablement</a></li>
+                                        <li><a href="#">Recognition Programs</a></li>
+                                        <li><a href="#">Corporate Gifting</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">By Industry</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">💻 Technology</a></li>
+                                        <li><a href="#">🏥 Healthcare</a></li>
+                                        <li><a href="#">🏦 Financial Services</a></li>
+                                        <li><a href="#">🏭 Manufacturing</a></li>
+                                        <li><a href="#">View All Industries →</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Enterprise Solutions</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Custom Programs</a></li>
+                                        <li><a href="#">Global Deployment</a></li>
+                                        <li><a href="#">Advanced Analytics</a></li>
+                                        <li><a href="#">Dedicated Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proposed Catalog Dropdown -->
+                    <div id="proposed-catalog-dropdown" class="wireframe-dropdown">
+                        <div class="dropdown-columns">
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Featured Collections</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Swag Catalog →</a></li>
+                                        <li><a href="#">Gift Catalog →</a></li>
+                                        <li><a href="#">New & Trending →</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Browse by Category</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">🍕 Food & Beverages</a></li>
+                                        <li><a href="#">👕 Apparel & Accessories</a></li>
+                                        <li><a href="#">💼 Office & Tech</a></li>
+                                        <li><a href="#">🏠 Home & Lifestyle</a></li>
+                                        <li><a href="#">View All Categories →</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Shop by Price</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Under $25</a></li>
+                                        <li><a href="#">$25 - $50</a></li>
+                                        <li><a href="#">$50 - $100</a></li>
+                                        <li><a href="#">Premium ($100+)</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Custom Branding</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Logo Services</a></li>
+                                        <li><a href="#">Design Support</a></li>
+                                        <li><a href="#">Brand Guidelines</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proposed Resources Dropdown -->
+                    <div id="proposed-resources-dropdown" class="wireframe-dropdown">
+                        <div class="dropdown-columns">
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Learn</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Case Studies</a></li>
+                                        <li><a href="#">Templates →</a></li>
+                                        <li><a href="#">Best Practices</a></li>
+                                        <li><a href="#">ROI Calculator</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Industry Insights</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Technology Trends</a></li>
+                                        <li><a href="#">Healthcare Compliance</a></li>
+                                        <li><a href="#">Financial Services</a></li>
+                                        <li><a href="#">Manufacturing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">By Team (Educational)</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">HR Resources</a></li>
+                                        <li><a href="#">Sales Resources</a></li>
+                                        <li><a href="#">Operations Resources</a></li>
+                                        <li><a href="#">Events Resources</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="dropdown-section">
+                                    <div class="dropdown-title">Support</div>
+                                    <ul class="dropdown-items">
+                                        <li><a href="#">Help Center</a></li>
+                                        <li><a href="#">API Documentation</a></li>
+                                        <li><a href="#">Contact Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                    <p style="margin: 0; color: #15803d; font-size: 14px;"><strong>Improvement:</strong> Solutions dropdown provides clear enterprise buyer pathways. Teams are properly contextualized under Solutions for business needs and under Resources for educational content.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Differences -->
+        <section class="content-section">
+            <h2 class="section-title">Key Improvements</h2>
+            <div class="section-content">
+                <div class="cards-grid">
+                    <div class="card" style="border-left: 4px solid #16a34a;">
+                        <h3 style="color: #16a34a;">✅ Solutions Dropdown Restored</h3>
+                        <p>Enterprise buyers can now navigate by Team, Use Case, and Industry - meeting B2B software expectations.</p>
+                    </div>
+                    
+                    <div class="card" style="border-left: 4px solid #3b82f6;">
+                        <h3 style="color: #3b82f6;">🔧 Enhanced Platform Features</h3>
+                        <p>Added Platform Overview and Enterprise Features section for better technical capability discovery.</p>
+                    </div>
+                    
+                    <div class="card" style="border-left: 4px solid #d97706;">
+                        <h3 style="color: #d97706;">📦 Progressive Catalog Browsing</h3>
+                        <p>Maintains Featured simplicity while adding category browsing and price-based shopping.</p>
+                    </div>
+                    
+                    <div class="card" style="border-left: 4px solid #8b5cf6;">
+                        <h3 style="color: #8b5cf6;">📚 Focused Resources</h3>
+                        <p>Teams appear in both Solutions (business context) and Resources (educational context) appropriately.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-navigation">
+            <a href="../hybrid-solution-design.html" class="nav-button secondary">
+                ← Previous: Solution Design
+            </a>
+            <a href="../index.html" class="nav-button">
+                Back to Overview →
+            </a>
+        </div>
+    </main>
+
+    <script src="../assets/navigation.js"></script>
+    <script src="../assets/wireframe-interactions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.NavigationUtils) {
+                window.NavigationUtils.generatePageNavigation('wireframes');
+            }
+        });
+    </script>
+</body>
+</html>
